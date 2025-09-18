@@ -3,9 +3,9 @@
   and to prevent the default Zaraz modal from appearing.
 */
 
-/* This hides the default Zaraz modal */
+/* This resets the default Zaraz modal styles */
 #zaraz-consent-modal {
-  display: none !important;
+  all: unset !important;
 }
 
 /* This is the container for our custom banner */
