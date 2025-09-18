@@ -1,30 +1,11 @@
-<!--
-  This is the corrected HTML. It removes the "Preferences" button which can trigger the default modal.
-  Please replace the old HTML in your Zaraz settings with this.
--->
 <div class="gdpr-cookie-banner-container">
-  <section
-    data-section-theme="dark-bold"
-    aria-label="Cookie banner"
-    class="gdpr-cookie-banner BOTTOM dark-bold bar full-styling"
-  >
-    <p class="disclaimer-text sqs-cookie-banner-v2-text">
-      We use cookies to provide you with a great experience and to help our
-      website run effectively. Please click "Accept" to agree.
+  <div class="gdpr-cookie-banner">
+    <p class="disclaimer-text">
+      We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.
     </p>
-    <div class="button-group sqs-cookie-banner-v2-cta-container">
-      <button
-        id="zaraz-consent-essentials"
-        class="decline sqs-button-element--secondary sqs-cookie-banner-v2-deny sqs-cookie-banner-v2-cta"
-      >
-        <span>Decline</span>
-      </button>
-      <button
-        id="zaraz-consent-accept"
-        class="accept sqs-button-element--primary sqs-cookie-banner-v2-accept sqs-cookie-banner-v2-cta"
-      >
-        <span>Accept</span>
-      </button>
+    <div class="button-group">
+      {{ .RejectAllButton }}
+      {{ .AcceptAllButton }}
     </div>
-  </section>
+  </div>
 </div>
