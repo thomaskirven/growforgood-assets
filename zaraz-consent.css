@@ -1,0 +1,99 @@
+/*
+  This is the corrected CSS to ensure the banner stays in the corner.
+  Please replace the old CSS in your Zaraz settings with this.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* This parent class ensures our styles don't conflict with anything else */
+#zaraz-consent-modal {
+  /* Resets default Zaraz styling */
+  all: unset !important; 
+}
+
+/* Main banner container styling */
+.final-consent-container {
+  /* Positioning */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2147483647; /* Highest z-index to stay on top */
+  max-width: 360px;
+
+  /* Appearance */
+  background-color: #F9F7F3;
+  color: #143F25;
+  border: 1px solid #EAE6DD;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  
+  /* Layout & Font */
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  
+  /* Prevents flash of unstyled content */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final-consent-text p {
+  margin: 0;
+}
+
+.final-consent-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.final-consent-button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-grow: 1;
+}
+
+.primary-button {
+  background-color: #143F25;
+  color: #F9F7F3;
+  border-color: #143F25;
+}
+
+.primary-button:hover {
+  background-color: #1E5C38;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #143F25;
+  border-color: #D3CEC2;
+}
+
+.secondary-button:hover {
+  background-color: #EAE6DD;
+}
+
+@media (max-width: 480px) {
+  .final-consent-container {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    max-width: none;
+  }
+}
