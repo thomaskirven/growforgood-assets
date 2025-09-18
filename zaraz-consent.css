@@ -1,23 +1,30 @@
 /*
-  This is the corrected CSS to ensure the banner stays in the corner.
-  Please replace the old CSS in your Zaraz settings with this.
+  This CSS is designed to create a simple, minimalistic banner at the bottom of the page,
+  and to prevent the default Zaraz modal from appearing.
 */
 
-/* This parent class ensures our styles don't conflict with anything else */
+/* This hides the default Zaraz modal */
 #zaraz-consent-modal {
-  all: unset !important;
+  display: none !important;
 }
 
+/* This is the container for our custom banner */
 .gdpr-cookie-banner-container {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 2147483647;
-  background-color: #1c1c1c;
-  color: #ffffff;
-  padding: 20px;
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  padding: 15px;
   box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gdpr-cookie-banner {
@@ -26,38 +33,31 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .disclaimer-text {
   margin: 0;
-  font-family: sans-serif;
-  font-size: 14px;
+  padding-right: 20px;
 }
 
 .button-group {
   display: flex;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .sqs-button-element--primary,
 .sqs-button-element--secondary {
-  padding: 10px 20px;
-  border: 1px solid transparent;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
   cursor: pointer;
-  font-family: sans-serif;
-  font-size: 14px;
-  font-weight: bold;
+  background-color: transparent;
+  color: #fff;
+  font-size: 13px;
 }
 
 .sqs-button-element--primary {
-  background-color: #ffffff;
-  color: #1c1c1c;
-}
-
-.sqs-button-element--secondary {
-  background-color: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
+  background-color: #fff;
+  color: #222;
 }
