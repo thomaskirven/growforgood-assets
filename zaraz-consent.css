@@ -1,12 +1,13 @@
-/*
-  This is the corrected CSS to ensure the banner stays in the corner.
-  Please replace the old CSS in your Zaraz settings with this.
-*/
-
-/* This parent class ensures our styles don't conflict with anything else */
-#zaraz-consent-modal {
-  all: unset !important;
+/* --- Zaraz Container Overrides (FIX) --- */
+#cf-consent-overlay {
+    display: none !important;
 }
+
+#zaraz-consent-modal > div {
+    align-items: flex-end !important;
+}
+
+/* --- Your Original Banner Styles --- */
 
 .gdpr-cookie-banner-container {
   position: fixed;
@@ -40,15 +41,23 @@
   gap: 10px;
 }
 
+/* --- Button Styles --- */
+
+/* This styles the button text provided by Zaraz */
+.button-group button {
+    all: unset;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .sqs-button-element--primary,
 .sqs-button-element--secondary {
   padding: 10px 20px;
   border: 1px solid transparent;
   border-radius: 5px;
   cursor: pointer;
-  font-family: sans-serif;
-  font-size: 14px;
-  font-weight: bold;
+  display: inline-block;
 }
 
 .sqs-button-element--primary {
@@ -56,8 +65,18 @@
   color: #1c1c1c;
 }
 
+/* Make text inside the primary button dark */
+.sqs-button-element--primary button {
+    color: #1c1c1c;
+}
+
 .sqs-button-element--secondary {
   background-color: transparent;
   color: #ffffff;
   border-color: #ffffff;
+}
+
+/* Make text inside the secondary button white */
+.sqs-button-element--secondary button {
+    color: #ffffff;
 }
