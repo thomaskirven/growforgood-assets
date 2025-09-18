@@ -1,14 +1,30 @@
 <!--
-    This is the corrected HTML. It removes the "Preferences" button which can trigger the default modal.
-    Please replace the old HTML in your Zaraz settings with this.
-  -->
-  <div class="final-consent-container">
-    <div class="final-consent-text">
-      <p>This website uses cookies to enhance the user experience and analyze our traffic.</p>
+  This is the corrected HTML. It removes the "Preferences" button which can trigger the default modal.
+  Please replace the old HTML in your Zaraz settings with this.
+-->
+<div class="gdpr-cookie-banner-container">
+  <section
+    data-section-theme="dark-bold"
+    aria-label="Cookie banner"
+    class="gdpr-cookie-banner BOTTOM dark-bold bar full-styling"
+  >
+    <p class="disclaimer-text sqs-cookie-banner-v2-text">
+      We use cookies to provide you with a great experience and to help our
+      website run effectively. Please click "Accept" to agree.
+    </p>
+    <div class="button-group sqs-cookie-banner-v2-cta-container">
+      <button
+        id="zaraz-consent-essentials"
+        class="decline sqs-button-element--secondary sqs-cookie-banner-v2-deny sqs-cookie-banner-v2-cta"
+      >
+        <span>Decline</span>
+      </button>
+      <button
+        id="zaraz-consent-accept"
+        class="accept sqs-button-element--primary sqs-cookie-banner-v2-accept sqs-cookie-banner-v2-cta"
+      >
+        <span>Accept</span>
+      </button>
     </div>
-    <div class="final-consent-buttons">
-      <button id="zaraz-consent-essentials" class="final-consent-button secondary-button">Decline</button>
-      <button id="zaraz-consent-accept" class="final-consent-button primary-button">Accept</button>
-    </div>
-  </div>
-  
+  </section>
+</div>
